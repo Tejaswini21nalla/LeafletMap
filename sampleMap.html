@@ -22,10 +22,17 @@
   <div id="mapid"></div>
   
   <script>
- 
+    function mapstyle(feature) {
+		    return{
+		       fillColor:"#fff",
+			   color:"#000",
+			   weight:'1',
+			   fillOpacity:1
+			};
+	  }
+    
     var basicMap = L.map('mapid').setView([23.579732, 80.442383],5);
-	var jsonLayer = L.geoJSON(states,{
-	 }).addTo(basicMap);
+	var jsonLayer = L.geoJSON(states,{style:mapstyle}).addTo(basicMap);
 	 
   </script>
 </body>
